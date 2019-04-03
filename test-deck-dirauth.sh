@@ -33,7 +33,7 @@ cat > ${td_available} <<'EOF'
 name: Test Tor Directory Authorities
 description: "This test deck performs a web connectivitity tests to the Tor directory authorities."
 schedule: "@daily"
-icon: "fa-comment-o"
+icon: "oo-tor"
 tasks:
 - name: Web Connectivy tests to Tor directory authorities.
   ooni:

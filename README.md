@@ -1,7 +1,8 @@
-This script setups a Tor web connectivity directory authorities test deck
+This script setups a Tor directory authorities test deck via the web
+connectivity test.
 
-Run with:
+Example command in lepidopter:
 
 ```
-sudo ./test-deck-dirauth.sh
+lepidopter@lepidopter:~$ sudo ./test-deck-dirauth.sh
 ```
