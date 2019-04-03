@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# This script setups a Tor web connectivity directory authorities test deck
+# This script setups a test deck with traceroutes and web connectivity tests
+# to Tor bridges and directory authorities.
 set -ex
 
 td_var=tor-dir-auth
@@ -38,7 +39,12 @@ tasks:
 - name: Web Connectivy tests to Tor directory authorities.
   ooni:
     test_name: web_connectivity
-    file: $tor_dirauth_urls
+    file: "$tor_dirauth_urls"
+
+- name: Does a traceroute test to Tor bridges and directory authorities
+  ooni:
+    test_name: traceroute
+    file: "$tor_bridge_lines"
 EOF
 
 ln -sf ${td_available} ${td_enabled}
